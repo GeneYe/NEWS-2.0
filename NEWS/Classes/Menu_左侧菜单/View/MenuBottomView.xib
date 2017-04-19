@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" id="iN0-l3-epB" customClass="MenuBottomView">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Menu_Mask" translatesAutoresizingMaskIntoConstraints="NO" id="TMR-r0-Wdr">
+                    <rect key="frame" x="0.0" y="0.0" width="250" height="70"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qa-yP-9k0">
+                    <rect key="frame" x="0.0" y="0.0" width="125" height="70"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                    <state key="normal" title="离线" image="Menu_Download"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhT-TR-mVt">
+                    <rect key="frame" x="125" y="0.0" width="125" height="70"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                    <state key="normal" title="夜间" image="Menu_Dark"/>
+                    <connections>
+                        <action selector="changeBackgroundColor:" destination="iN0-l3-epB" eventType="touchUpInside" id="Fnz-Q1-1Jc"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="TMR-r0-Wdr" secondAttribute="trailing" id="8BI-G9-SzO"/>
+                <constraint firstItem="hhT-TR-mVt" firstAttribute="leading" secondItem="7qa-yP-9k0" secondAttribute="trailing" id="F2e-sn-GdT"/>
+                <constraint firstAttribute="bottom" secondItem="7qa-yP-9k0" secondAttribute="bottom" id="IRA-Y0-8QA"/>
+                <constraint firstItem="hhT-TR-mVt" firstAttribute="height" secondItem="7qa-yP-9k0" secondAttribute="height" id="Ijc-G6-awE"/>
+                <constraint firstItem="7qa-yP-9k0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="J0y-wh-mBm"/>
+                <constraint firstAttribute="bottom" secondItem="TMR-r0-Wdr" secondAttribute="bottom" id="Ng6-0T-6ca"/>
+                <constraint firstItem="7qa-yP-9k0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="PW8-R9-lTX"/>
+                <constraint firstItem="hhT-TR-mVt" firstAttribute="width" secondItem="7qa-yP-9k0" secondAttribute="width" id="PZm-Po-b3H"/>
+                <constraint firstAttribute="trailing" secondItem="hhT-TR-mVt" secondAttribute="trailing" id="Rpv-Gz-4lj"/>
+                <constraint firstItem="hhT-TR-mVt" firstAttribute="top" secondItem="7qa-yP-9k0" secondAttribute="top" id="YyO-72-SnM"/>
+                <constraint firstItem="TMR-r0-Wdr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="n4I-Yu-RBR"/>
+                <constraint firstItem="TMR-r0-Wdr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="yVw-jZ-bUE"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="MenuBottomDarkButton" destination="hhT-TR-mVt" id="zdZ-Bq-IOO"/>
+                <outlet property="MenuBottomDownLoadButton" destination="7qa-yP-9k0" id="9ue-mW-Vyq"/>
+            </connections>
+            <point key="canvasLocation" x="-229" y="-27"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Menu_Dark" width="22" height="22"/>
+        <image name="Menu_Download" width="22" height="22"/>
+        <image name="Menu_Mask" width="320" height="148"/>
+    </resources>
+</document>

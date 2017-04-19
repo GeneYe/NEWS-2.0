@@ -1,0 +1,43 @@
+//
+//  PrefixHeader.pch
+//  哔哩哔哩demo2
+//
+//  Created by Gene_Ye on 16/10/24.
+//  Copyright © 2016年 Gene. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define Screen_Width [UIScreen mainScreen].bounds.size.width
+#define Screen_Height [UIScreen mainScreen].bounds.size.height
+
+#define Menu_Width Screen_Width/2 +10
+/*颜色*/
+#define RLColorA(r,g,b,a) [UIColor colorWithRed:(r/255.0) green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
+#define RLColor(r,g,b) RLColorA((r),(g),(b),255)
+#define RLColorRandom RLColor(arc4random_uniform(255),arc4random_uniform(255),arc4random_uniform(255))
+
+#define RLGrayColor(v) RLColor((v),(v),(v))
+#define RLCommonBgColor RLColor(247, 88, 135)
+
+#define GYCommonBgColor RLColor(35,42,48)
+
+//#define GYNavigationBarColor RLColor(122,125,112)
+#define GYNavigationBarColor RLColor(187,193,201)
+
+#define GYFontColor RLColor(152,157,161)
+
+#define GYCellSelectedColor RLColor(27,35,41)
+
+#define GYTableViewCellBackgroundColor RLColor(52,52,52)
+
+#define GYTableViewCellTextColor RLColor(185,185,185)
+
+#import "UIView+UIViewExtension.h"
+
+
+#endif /* PrefixHeader_pch */
